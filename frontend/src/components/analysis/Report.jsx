@@ -41,9 +41,9 @@ function Report() {
         subtitle="Get a clear picture of your financial activity and spending habits."
       />
 
-      <div className="flex flex-wrap gap-2">
-        {reportsData.length > 0 ? (
-          reportsData.map((report, index) => (
+      {reportsData.length > 0 ? (
+        <div className="flex flex-wrap gap-2">
+          {reportsData.map((report, index) => (
             <div
               key={index}
               className="bg-[#F5F5F5] rounded-xl border border-slate-200/80 p-5 w-full max-w-sm"
@@ -118,11 +118,11 @@ function Report() {
                 </div>
               </div>
             </div>
-          ))
-        ) : (
-          <Loader />
-        )}
-      </div>
+          ))}
+        </div>
+      ) : (
+        <Loader />
+      )}
     </>
   );
 }
