@@ -8,6 +8,7 @@ import AuthContext from "@/context/AuthContext";
 import { logoutUser } from "@/services/authService";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import DeleteAccount from "@/components/DeleteAccount";
 
 function Profile() {
   const { user, setUser } = useContext(AuthContext);
@@ -78,6 +79,8 @@ function Profile() {
                 </div>
                 <span className="text-xs">→</span>
               </button>
+
+              <DeleteAccount />
             </div>
           </div>
         </div>

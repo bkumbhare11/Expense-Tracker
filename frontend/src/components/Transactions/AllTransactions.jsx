@@ -122,7 +122,7 @@ function AllTransactions({ filters, setFilters }) {
         ))
       ) : (
         <Empty
-          icon={<XCircle size={48} color="#DC2626" />}
+          icon={<XCircle size={48} />}
           title="No Transaction Found"
           description="Create your first transaction click on the '+' button on the sidebar"
         />

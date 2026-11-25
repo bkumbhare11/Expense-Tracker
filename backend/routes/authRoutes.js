@@ -16,6 +16,7 @@ import {
   forgotPassword,
   resetPassword,
   profile,
+  deleteAccount,
 } from "../controllers/authController.js";
 
 const router = express.Router();
@@ -43,5 +44,7 @@ router.post(
 router.post("/forgot-password", forgotPassword);
 
 router.post("/logout", logoutUser);
+
+router.delete("/delete-account", authMiddleware, deleteAccount);
 
 export default router;
