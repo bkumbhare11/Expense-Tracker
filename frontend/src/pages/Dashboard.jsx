@@ -33,7 +33,6 @@ function Dashboard() {
       try {
         const res = await getDashboardSummary();
         setSummary(res.data);
-        console.log(res.data);
       } catch (error) {
         toast.error(error.response?.data?.message || "Error Fetching Summary");
       }
@@ -43,7 +42,6 @@ function Dashboard() {
       try {
         const res = await getCategoryExpense();
         setCategoryExpense(res.data);
-        console.log(res.data);
       } catch (error) {
         toast.error(
           error.response?.data?.message || "Error Fetching Category Expense",
@@ -65,9 +63,7 @@ function Dashboard() {
     async function fetchBudget() {
       try {
         const res = await getBudget();
-        console.log(res);
-        console.log(res.data);
-        console.log(res.success);
+
         if (res.success) {
           fetchDashboard();
           fetchCategoryExpenses();
